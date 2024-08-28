@@ -1,0 +1,110 @@
+/* App.css */
+
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode h2, 
+.light-mode p {
+  color: black;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode h2, 
+.dark-mode p {
+  color: white;
+}
+
+/* Switch Component */
+.switch {
+  cursor: pointer;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+.switch.dark-mode {
+  background-color: #333;
+}
+
+.switch.dark-mode::before {
+  left: 35px;
+}
+
+.switch.light-mode {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
